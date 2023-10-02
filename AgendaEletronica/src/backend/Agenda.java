@@ -18,7 +18,7 @@ public class Agenda implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private ArrayList<Evento> eventos;
 	private ArrayList<DataAgenda> datas;
-	
+
 	public Agenda() {
 		datas = new ArrayList<DataAgenda>();
 		eventos = new ArrayList<Evento>();
@@ -33,6 +33,10 @@ public class Agenda implements Serializable {
 		return datas;
 	}
 	
+	/**
+	 * Retorna as datas de um mês em específico.
+	 * @returns a lista de datas
+	*/
 	public ArrayList<DataAgenda> getDatas(int mes, int ano) {
 		
 		ArrayList<DataAgenda> datasPesquisa = new ArrayList<DataAgenda>();
@@ -62,7 +66,9 @@ public class Agenda implements Serializable {
 	public boolean removeDataAgenda(DataAgenda dataAgenda) {
 		return datas.remove(dataAgenda);
 	}
-	
+	/**Retorna uma lista com todos os eventos.
+	 * @returns a lista de eventos
+	*/
 	public ArrayList<Evento> pesquisaEventos() {
 		ArrayList<Evento> eventosPesquisa = new ArrayList<Evento>();;
 		for (Evento evento : eventos) {
@@ -71,7 +77,11 @@ public class Agenda implements Serializable {
 		eventosPesquisa.sort(null);
 		return eventosPesquisa;
 	}
-	
+	/**Retorna um array com todos os eventos dentro de um intervalo de datas.
+	 * @param inicio a data inicial
+	 * @param fim a data final
+	 * @returns a lista de eventos
+	*/
 	public ArrayList<Evento> pesquisaEventos(LocalDate inicio, LocalDate fim) {
 		if (inicio.isAfter(fim)) {
 			throw new IllegalArgumentException("Intevalo inválido");
@@ -90,7 +100,10 @@ public class Agenda implements Serializable {
 		return eventosPesquisa;
 		
 	}
-	
+	/**Retorna uma lista com todos os eventos que contem um nome específico.
+	 * @param nome o nome que deve estar contido pelos nomes dos eventos
+	 * @returns a lista de eventos
+	*/
 	public ArrayList<Evento> pesquisaEventos(String nome) {
 		ArrayList<Evento> eventosPesquisa = new ArrayList<Evento>();
 
@@ -103,7 +116,12 @@ public class Agenda implements Serializable {
 		return eventosPesquisa;
 		
 	}
-	
+	/**Retorna uma lista com todos os eventos dentro de um intervalo de datas que contem um nome específico.
+	 * @param inicio a data inicial
+	 * @param fim a data final
+	 * @param nome o nome que deve estar contido pelos nomes dos eventos.
+	 * @returns a lista de eventos
+	*/
 	public ArrayList<Evento> pesquisaEventos(LocalDate inicio, LocalDate fim, String nome) {
 		if (inicio.isAfter(fim)) {
 			throw new IllegalArgumentException("Intevalo inválido");
@@ -144,7 +162,9 @@ public class Agenda implements Serializable {
 		}
 		return true;
 	}
-	
+	/**
+	 * Serializa a agenda em um arquivo.
+	 */
 	public void salvar() {
 		try {	
 			FileOutputStream fileOut = new FileOutputStream("Agenda");
@@ -160,7 +180,9 @@ public class Agenda implements Serializable {
 			e.printStackTrace();
 		}
 	}
-	
+	/**
+	 * Verifica se há uma agenda salva e carrega.
+	 */
 	public static Agenda carregar() {
 		File agendaFile = new File("Agenda");
 		if (!agendaFile.exists()) {

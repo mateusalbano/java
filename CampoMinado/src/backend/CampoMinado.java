@@ -12,6 +12,12 @@ public class CampoMinado {
 	private boolean vitoria;
 	private boolean derrota;
 	
+	/**
+	 * Cria um campo vazio.
+	 * @param n1 número de linhas
+	 * @param n2 número de colunas
+	 */
+
 	public CampoMinado(int n1, int n2) {
 		this.n1 = n1;
 		this.n2 = n2;
@@ -19,6 +25,13 @@ public class CampoMinado {
 		campo = new int[n1][n2];
 		casaAberta = new boolean[n1][n2];
 	}
+
+	/**
+	 * Cria um campo vazio.
+	 * @param n1 número de linhas
+	 * @param n2 número de colunas
+	 * @param bombRate chance de ocorrer uma bomba em cada célula
+	 */
 	public CampoMinado(int n1, int n2, double bombRate) {
 		this.n1 = n1;
 		this.n2 = n2;
@@ -26,7 +39,9 @@ public class CampoMinado {
 		campo = new int[n1][n2];
 		casaAberta = new boolean[n1][n2];
 	}
-	
+	/**
+	 * Reinicia o jogo.
+	 */
 	public void reiniciar() {
 		campo = new int[n1][n2];
 		casaAberta = new boolean[n1][n2];
@@ -35,7 +50,9 @@ public class CampoMinado {
 		jogadas = 0;
 		bombas = 0;
 	}
-	
+	/**
+	 * Abre todas as casas, revelando todas as posições com bombas.
+	 */
 	public void clear() {
 		for (int i = 0; i < n1; i++) {
 			for (int j = 0; j < n2; j++) {
@@ -51,7 +68,9 @@ public class CampoMinado {
 			throw new IllegalArgumentException("bombRate precisa estar entre 0 - 1");
 		}
 	}
-	
+	/**
+	 * Imprime o campo no terminal, método voltado para demonstrações.
+	 */
 	public void exibir() {
 		
 		for (int i = 0; i < n1; i++) {
@@ -65,7 +84,10 @@ public class CampoMinado {
 			}
 		}
 	}
-
+	/**
+	 * Verifica se todos os campos sem bomba estão abertos, que corresponde a uma vitória.
+	 * @return true se todos os campos sem bomba estão abertos.
+	 */
 	private boolean verificaVitoria() {
 		
 		for (int i = 0; i < n1; i++) {
@@ -75,7 +97,12 @@ public class CampoMinado {
 		}
 		return vitoria = true;
 	}
-	
+	/**
+	 * Abre uma célula do campo, na primeira jogada que será definida a posição de todas as bombas.
+	 * @param i linha
+	 * @param j coluna
+	 * @return true se a jogada é válida (jogo ainda em andamento).
+	 */
 	public boolean jogar(int i, int j) {
 		if (vitoria || derrota) {
 			return false;

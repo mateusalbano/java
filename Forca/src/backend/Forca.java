@@ -160,15 +160,6 @@ public class Forca {
 		return false;
 	}
 	
-	/*
-	 *If 0 returned, the game is already finished, it needs to restart for method activity.
-	 *If 1 returned, the char inputed is not valid.
-	 *If 2 returned, the char is already inputed.
-	 *If 3 returned, the chosen word has this letter, but the player did not achieve victory.
-	 *If 4 returned, the player achieved victory.
-	 *If 5 returned, a mistake was committed but the match is not over.
-	 *If 6 returned, a mistake was committed and the match is over.
-	 */
 	public int jogar(char letra) {
 		if (fim) {
 			return GAME_OVER;

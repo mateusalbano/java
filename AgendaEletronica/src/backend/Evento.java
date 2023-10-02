@@ -24,8 +24,11 @@ public class Evento implements Cloneable, Serializable, Comparable<Evento> {
 	public static final int PRIORIDADE_ALTA = 2;
 
 	public Evento(String nome, int prioridade, int minutos, boolean finalizado, LocalDateTime dataHorario) {
-
-		this.dataHorario = dataHorario;
+		setNome(nome);
+		setPrioridade(prioridade);
+		setMinutos(minutos);
+		setFinalizado(finalizado);
+		setDataHorario(dataHorario);
 	}
 	
 	public Evento(LocalDate data) {

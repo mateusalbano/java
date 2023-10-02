@@ -1,10 +1,9 @@
 package backend;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class DataAgenda extends CalendarDate implements Serializable {
+public class DataAgenda extends CalendarDate {
 	
 	/**
 	 * 
