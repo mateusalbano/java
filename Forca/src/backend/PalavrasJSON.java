@@ -3,6 +3,8 @@ package backend;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -22,7 +24,7 @@ public class PalavrasJSON {
 		JSONParser json = new JSONParser();
 		try {
 			
-			FileReader fr = new FileReader(file);
+			FileReader fr = new FileReader(file, StandardCharsets.UTF_8);
 			jsonObject = (JSONObject) json.parse(fr);
 		} catch (IOException | ParseException e) {
 			e.printStackTrace();
