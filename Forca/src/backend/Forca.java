@@ -4,6 +4,11 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 
 public class Forca {
+
+	/**
+	 * @author Mateus Albano Santos
+	 */
+	
 	private int erros;
 	private int maxErros;
 	private String palavra;
@@ -25,11 +30,18 @@ public class Forca {
 	public boolean isFim() {
 		return fim;
 	}
-
+	/**
+	 * Inicia o jogo com o número de erros máximo igual a 6.
+	 * @param palavra a palavra a se jogar
+	 */
 	public Forca(String palavra) {
 		iniciarJogo(palavra, 6);
 	}
-	
+	/**
+	 * Inicia o jogo com o número de erros máximo determinado pelo programador.
+	 * @param palavra a palavra a se jogar
+	 * @param maxErros o número máximo de erros
+	 */
 	public Forca(String palavra, int maxErros) {
 		iniciarJogo(palavra, maxErros);
 	}
@@ -58,15 +70,24 @@ public class Forca {
 		this.maxErros = maxErros;
 	}
 	
-	
+	/**
+	 * Reinicia o jogo.
+	 * @param palavra a palavra a se jogar
+	 */
 	public void reiniciar(String palavra) {
 		iniciarJogo(palavra, maxErros);
 	}
-	
+	/**
+	 * Reinicia o jogo.
+	 */
 	public void reiniciar() {
 		iniciarJogo(palavra, maxErros);
 	}
-	
+	/**
+	 * Método que retorna a uma {@code String} com os caracteres descobertos e
+	 * no lugar dos não descobertos terá um underline '_'.
+	 * @return a palavra formatada
+	 */
 	public String getPalavraForca() {
 		String palavraForca = "";
 		if(letrasCorretas[0] == Character.MIN_VALUE) {
@@ -159,7 +180,11 @@ public class Forca {
 		letrasEnviadas.add(letra);
 		return false;
 	}
-	
+	/**
+	 * Método usado para realizar uma jogada com uma letra.
+	 * @param letra a letra a ser jogada
+	 * @return o resultado da sua jogada em um {@code int}
+	 */
 	public int jogar(char letra) {
 		if (fim) {
 			return GAME_OVER;
@@ -187,7 +212,12 @@ public class Forca {
 		fim = true;
 		return DEFEAT;
 	}
-	
+
+	/**
+	 * Método usado para realizar uma jogada com uma palavra.
+	 * @param palavra a palavra a ser jodada
+	 * @return o resultado da sua jogada em um {@code int}
+	 */
 	public int jogar(String palavra) {
 		if (fim) {
 			return 0;

@@ -4,9 +4,11 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public abstract class CalendarDate implements Serializable {
+
 	/**
-	 * 
+	 * @author Mateus Albano Santos
 	 */
+	
 	private static final long serialVersionUID = 1L;
 	protected LocalDate date;
 	protected boolean important;

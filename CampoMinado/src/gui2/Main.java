@@ -1,9 +1,10 @@
-package gui;
+package gui2;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
+
 
 public class Main extends JFrame {
 
@@ -67,7 +68,7 @@ public class Main extends JFrame {
 				if (gameOn) {
 					return;
 				}
-				JFrame jogo = new Jogo("Fácil", 7, 7, 0.05);
+				Jogo jogo = new Jogo("Fácil", 7, 7, 0.05);
 				jogo.setVisible(true);
 				gameOn = true;
 			}

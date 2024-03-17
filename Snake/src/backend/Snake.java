@@ -4,6 +4,10 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Snake {
+
+	/**
+	 * @author Mateus Albano Santos
+	 */
 	
 	private int[][] mapa;
 	private int[] head;
@@ -23,6 +27,14 @@ public class Snake {
 	private boolean gameOver;
 	private Queue<int[]> snake;
 	
+
+	/**
+	 * Inicia um jogo com o tamanho e a posição da cobra determinados.
+	 * @param rows o número de linhas do jogo
+	 * @param columns o número de colunas do jogo
+	 * @param snakeRow a linha em que a cobra estará
+	 * @param snakeColumn a coluna em que a cobra estará
+	 */
 	public Snake(int rows, int columns, int snakeRow, int snakeColumn) {
 		this.rows = rows;
 		this.columns = columns;
@@ -36,7 +48,11 @@ public class Snake {
 		snake.add(head);
 		newPoint();
 	}
-	
+	/**
+	 * Reinicia o jogo com a posição da cobra determinada.
+	 * @param snakeRowa linha em que a cobra estará
+	 * @param snakeColumn a coluna em que a cobra estará
+	 */
 	public void reiniciar(int snakeRow, int snakeColumn) {
 		moves = 0;
 		gameOver = false;
@@ -51,11 +67,19 @@ public class Snake {
 		newPoint();
 	}
 	
+	/**
+	 * Realiza um movimento para a cobra.
+	 * @param move o movimento a ser realizado
+	 * @return {@code}true{@code} se o jogo acabou
+	 */
 	public boolean jogar(int move) {
 		moveSnake(move);
 		return gameOver;
 	}
 	
+	/**
+	 * Exibe o jogo no terminal em formato de texto.
+	 */
 	public void exibir() {
 		System.out.println(toString());
 	}
@@ -137,7 +161,11 @@ public class Snake {
 			snake.add(head);
 			newPoint();
 		} else if (value == SNAKE_SPACE) {
-			gameOver = true;
+			if (row(row) == tail[0] && column(column) == tail[1]) {
+				atualizaSnake(row, column);
+			} else {
+				gameOver = true;
+			}
 		} else {
 			atualizaSnake(row, column);
 		}
@@ -180,6 +208,14 @@ public class Snake {
 	
 	private int sortear(int min, int max) {
 		return (int) (min + Math.round(Math.random() * max - min));
+	}
+
+	public int[] getHead() {
+		return head;
+	}
+
+	public int[] getTail() {
+		return tail;
 	}
 	
 	@Override

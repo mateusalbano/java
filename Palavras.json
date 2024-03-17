@@ -1,0 +1,122 @@
+{
+    "Alimentos": [
+      "Maçã",
+      "Pizza",
+      "Banana",
+      "Chocolate",
+      "Sorvete",
+      "Hamburguer",
+      "Pão",
+      "Arroz",
+      "Cenoura",
+      "Morango"
+    ],
+    "Animais": [
+      "Cachorro",
+      "Gato",
+      "Elefante",
+      "Leão",
+      "Girafa",
+      "Tigre",
+      "Cavalo",
+      "Pássaro",
+      "Tubarão",
+      "Macaco"
+    ],
+    "Artistas famosos": [
+      "Leonardo da Vinci",
+      "Mona Lisa",
+      "Michael Jackson",
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Beyoncé",
+      "Taylor Swift",
+      "Albert Einstein",
+      "Madonna",
+      "Elvis Presley"
+    ],
+    "Cidades famosas": [
+      "Paris",
+      "Nova Iorque",
+      "Londres",
+      "Tóquio",
+      "Roma",
+      "Rio de Janeiro",
+      "Los Angeles",
+      "Cairo",
+      "Sydney",
+      "Barcelona"
+    ],
+    "Esportes": [
+      "Futebol",
+      "Basquete",
+      "Tênis",
+      "Natação",
+      "Atletismo",
+      "Golfe",
+      "Vôlei",
+      "Boxe",
+      "Hóquei",
+      "Surfe"
+    ],
+    "Marcas Famosas": [
+      "Apple",
+      "Nike",
+      "Coca-Cola",
+      "Amazon",
+      "Microsoft",
+      "Google",
+      "McDonald's",
+      "Adidas",
+      "Toyota",
+      "Samsung"
+    ],
+    "Partes do corpo": [
+      "Cabeça",
+      "Braço",
+      "Perna",
+      "Mão",
+      "Pé",
+      "Olho",
+      "Orelha",
+      "Boca",
+      "Nariz",
+      "Dedo"
+    ],
+    "Peças de roupa": [
+      "Camiseta",
+      "Calça",
+      "Vestido",
+      "Camisa",
+      "Jaqueta",
+      "Sapato",
+      "Meia",
+      "Boné",
+      "Saia",
+      "Gravata"
+    ],
+    "Países": [
+      "Brasil",
+      "Estados Unidos",
+      "China",
+      "Índia",
+      "Rússia",
+      "Japão",
+      "Canadá",
+      "Austrália",
+      "França",
+      "Alemanha"
+    ],
+    "Verbos": [
+      "Correr",
+      "Nadar",
+      "Saltar",
+      "Comer",
+      "Dormir",
+      "Cantar",
+      "Dançar",
+      "Ler",
+      "Escrever",
+      "Falar"
+    ]
+  }

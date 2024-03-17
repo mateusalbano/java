@@ -3,6 +3,7 @@ package gui;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 
@@ -12,6 +13,7 @@ public class Main extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+    protected static boolean gameOn;
 	private JPanel contentPane;
 	private Jogo jogo;
 

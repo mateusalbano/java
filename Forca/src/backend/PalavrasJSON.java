@@ -21,6 +21,7 @@ public class PalavrasJSON {
 		File file = new File(fileName); 
 		JSONParser json = new JSONParser();
 		try {
+			
 			FileReader fr = new FileReader(file);
 			jsonObject = (JSONObject) json.parse(fr);
 		} catch (IOException | ParseException e) {

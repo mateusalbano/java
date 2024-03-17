@@ -1,6 +1,10 @@
 package backend;
 
 public class CampoMinado {
+
+	/**
+	 * @author Mateus Albano Santos
+	 */
 	
 	private int campo[][];
 	private boolean casaAberta[][];

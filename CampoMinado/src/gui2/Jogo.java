@@ -1,4 +1,4 @@
-package gui;
+package gui2;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -50,10 +50,6 @@ public class Jogo extends JFrame {
 	private JButton btnReiniciar;
 	private JButton btnBandeira;
 	private Dimension dimension;
-
-	/**
-	 * Launch the application.
-	 */
 	
 	private void reiniciar() {
 		minutos = 0;
@@ -199,6 +195,7 @@ public class Jogo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+
 	public Jogo(String titulo, int x, int y, double bombRate) {
 		this.x = x;
 		this.y = y;

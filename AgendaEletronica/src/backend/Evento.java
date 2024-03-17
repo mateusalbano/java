@@ -6,9 +6,11 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Evento implements Cloneable, Serializable, Comparable<Evento> {
+
 	/**
-	 * 
+	 * @author Mateus Albano Santos
 	 */
+
 	private static final long serialVersionUID = 1L;
 	private String nome;
 	private int prioridade;

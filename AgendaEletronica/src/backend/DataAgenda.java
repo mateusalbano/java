@@ -6,8 +6,9 @@ import java.util.ArrayList;
 public class DataAgenda extends CalendarDate {
 	
 	/**
-	 * 
+	 * @author Mateus Albano Santos
 	 */
+	
 	private static final long serialVersionUID = 1L;
 	private ArrayList<Evento> eventos;
 	private Agenda agenda;
